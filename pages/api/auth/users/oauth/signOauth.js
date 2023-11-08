@@ -48,7 +48,7 @@ export default async function handler(req, res) {
         _id = user.accountId
       }
       else {
-        const newAccount = await createDocumentMongoDriver(client, "accountadmins", {
+        const newAccount = await createDocumentMongoDriver(client, "account_admins", {
           primer_nombre: req.body?.name ? req.body.name.split(' ')[0] : null,
           superAdmin: false,
           permissions: {
