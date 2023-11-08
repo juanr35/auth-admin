@@ -66,8 +66,8 @@ export default async function handler (req, res) {
         verifyId: verifyDoc._id
       }, session)
     
-    let mailInfo = await sendMail(verifyDoc.hash, req.body.email)
-    assert.ok( mailInfo );
+    //let mailInfo = await sendMail(verifyDoc.hash, req.body.email)
+    //assert.ok( mailInfo );
 
     await session.commitTransaction();    
     return res.status(201).json(userDoc)
